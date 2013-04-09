@@ -1,5 +1,5 @@
 /*
- * jsLaTeX v1.2.1 - A jQuery plugin to directly embed LaTeX into your website or blog
+ * jsLaTeX v1.2.2 - A jQuery plugin to directly embed LaTeX into your website or blog
  * 
  *  Copyright (c) 2009 Andreas Grech
  *

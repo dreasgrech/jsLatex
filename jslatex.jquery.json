@@ -1,11 +1,11 @@
 {
-    "name": "jsLatex",
+    "name": "jsLaTeX",
     "title": "jsLatex",
     "description": "A jQuery plugin to directly embed LaTeX into your website or blog",
     "keywords": [
         "latex",
         "math",
-        "embed",
+        "embed"
     ],
     "version": "1.2.0",
     "author": {

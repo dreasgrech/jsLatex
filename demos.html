@@ -1,0 +1,129 @@
+<html>
+        <head>
+                <title>
+                        jsLaTeX - jQuery plugin (Andreas Grech)
+                </title>
+                <style> 
+                        body {
+                                text-align:center;
+                        }
+                        div {
+                                margin-bottom:60px
+                        }
+                        h1 {
+                                text-align:center;
+                                margin-top:0px;
+                        }
+                        .equation {
+                                width: 960px;
+                                font-family:"Courier New", Courier, monospace;
+                                margin-bottom:20px;
+                        }
+                        #wrapper {
+                                width:960px;
+                                margin-left: auto;
+                                margin-right:auto;
+                                border:1px solid black;
+                                padding:20px;
+                                text-align:left;
+                        }
+                </style>
+        </head>
+
+        <body>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+                </script>
+                <script src="jquery.jslatex.packed.js"></script>
+                <script>
+
+                        $(function() {
+                                $(".latex1").latex()
+                                $(".latex2").latex({url: 'http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq={e}'});  
+                                $(".latex3").latex({
+                                        callback: function () {
+                                                this.css({border: '1px solid black'});
+                                        }
+                                });
+                                $(".latex4").latex({
+                                        url: 'http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq={e}',
+                                        callback: function () {
+                                                this.css({border: '2px solid red'});
+                                        }
+                                });
+
+                        });
+                </script>
+                <div id="wrapper">
+                        <h1>jsLaTeX Demos, by <a href="http://blog.dreasgrech.com" target="_blank">Andreas Grech</a></h1>
+                        <div class="equation">
+                                \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi  
+                        </div>
+                        <h2>Simple</h2>
+<pre>
+$(".latex1").latex()
+</pre>
+                        <div class="latex1">
+                                \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi  
+                        </div>
+                        <h2>Different engine</h2>
+<pre>
+$(".latex2").latex({url: 'http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq={e}'});
+</pre>
+                        <div class="latex2">
+                                \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi  
+                        </div>
+                        <h2>Callback</h2>
+<pre>
+$(".latex3").latex({
+        callback: function () {
+                this.css({border: '1px solid black'});
+        }
+});
+</pre>
+                        <div class="latex3">
+                                \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi
+                        </div>
+                        <h2>Combination</h2>
+<pre>
+$(".latex4").latex({
+        url: 'http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq={e}',
+        callback: function () {
+                this.css({border: '2px solid red'});
+        }
+});
+</pre>
+                        <div class="latex4">
+                                \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi
+                        </div>
+                        <hr/>
+                        <h2>Other examples</h2>
+                        <div class="equation">
+                                \setlength{\unitlength}{1mm}\begin{picture}(60, 40)\put(30, 20){\vector(1, 0){30}}\put(30, 20){\vector(4, 1){20}}\put(30, 20){\vector(3, 1){25}}\put(30, 20){\vector(2, 1){30}}\put(30, 20){\vector(1, 2){10}}\thicklines\put(30, 20){\vector(-4, 1){30}}\put(30, 20){\vector(-1, 4){5}}\thinlines\put(30, 20){\vector(-1, -1){5}}\put(30, 20){\vector(-1, -4){5}}\end{picture}
+                        </div>
+                        <div class="latex2">\setlength{\unitlength}{1mm}\begin{picture}(60, 40)\put(30, 20){\vector(1, 0){30}}\put(30, 20){\vector(4, 1){20}}\put(30, 20){\vector(3, 1){25}}\put(30, 20){\vector(2, 1){30}}\put(30, 20){\vector(1, 2){10}}\thicklines\put(30, 20){\vector(-4, 1){30}}\put(30, 20){\vector(-1, 4){5}}\thinlines\put(30, 20){\vector(-1, -1){5}}\put(30, 20){\vector(-1, -4){5}}\end{picture}</div>
+                        <div class="equation">
+                                \begin{aligned}x^2+4x-21&=0\\x^2+4x&=25\\x^2+4x+4&=21+4\\(x+2)^2&=25\\x+2&=\pm 5\\x&=-2\pm 5\end{aligned}
+                        </div>
+                        <div class="latex1">\begin{aligned}x^2+4x-21&=0\\x^2+4x&=25\\x^2+4x+4&=21+4\\(x+2)^2&=25\\x+2&=\pm 5\\x&=-2\pm 5\end{aligned}</div>
+                        <div class="equation">
+                                \left(\begin{array}{clrr}a+b+c & uv & x-y & 27 \\x+y  & w  & +z  & 363 \end{array}\right)
+                        </div>
+                        <div class="latex1">
+                                \left(\begin{array}{clrr}a+b+c & uv & x-y & 27 \\x+y  & w  & +z  & 363 \end{array}\right)
+                        </div>
+                        <div class="equation">
+                                \sigma_{3} = \left(\begin{array}{cc}1 & 0\\0 & -1\end{array}\right)
+                        </div>
+                        <div class="latex1">
+                                \sigma_{3} = \left(\begin{array}{cc}1 & 0\\0 & -1\end{array}\right)
+                        </div>
+                        <div class="equation">
+                                <a name="castigliano">\Delta = \frac{\partial U^*}{\partial F} = \frac{12F}{Eb} \int_0^L \frac{x^2}{(t_0 + \alpha x)^3} dx</a>
+                        </div>
+                        <div class="latex1">
+                                \Delta = \frac{\partial U^*}{\partial F} = \frac{12F}{Eb} \int_0^L \frac{x^2}{(t_0 + \alpha x)^3} dx
+                        </div>
+                </div>
+        </body>
+</html>
+

@@ -1,0 +1,26 @@
+{
+    "name": "jsLatex",
+    "title": "jsLatex",
+    "description": "A jQuery plugin to directly embed LaTeX into your website or blog",
+    "keywords": [
+        "latex",
+        "math",
+        "embed",
+    ],
+    "version": "1.2.0",
+    "author": {
+        "name": "Andreas Grech",
+        "url": "http://blog.dreasgrech.com"
+    },
+    "licenses": [
+        {
+            "type": "WTFPL",
+            "url": "https://github.com/dreasgrech/jslatex/blob/master/WTFPL-LICENSE.txt"
+        }
+    ],
+    "homepage": "http://blog.dreasgrech.com/2009/12/jslatex-jquery-plugin-to-directly-embed.html",
+    "docs": "http://blog.dreasgrech.com/2012/01/promoting-your-chrome-extension-with.html",
+    "dependencies": {
+        "jquery": ">=1.3"
+    }
+}

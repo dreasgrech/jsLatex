@@ -19,7 +19,7 @@
         }
     ],
     "homepage": "http://blog.dreasgrech.com/2009/12/jslatex-jquery-plugin-to-directly-embed.html",
-    "docs": "http://blog.dreasgrech.com/2012/01/promoting-your-chrome-extension-with.html",
+    "docs": "http://blog.dreasgrech.com/2009/12/jslatex-jquery-plugin-to-directly-embed.html",
     "dependencies": {
         "jquery": ">=1.3"
     }
